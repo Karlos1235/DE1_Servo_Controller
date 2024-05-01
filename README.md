@@ -19,7 +19,7 @@
     </p>
     </br>
     <div align="center">
-        <img src="https://slidetodoc.com/presentation_image_h/c216b6866f4d0c039758f6263dd11c90/image-2.jpg" alt="PWM Modulation Image 1" srcset="" width="520px" height="340px">
+        <img src="https://slidetodoc.com/presentation_image_h/c216b6866f4d0c039758f6263dd11c90/image-2.jpg" alt="PWM Modulation Image 1" srcset="" width="521px" height="360px">
         </br>
         <p>Figure 1. Pulse Width Modulation (PWM)</p>
     </div>
