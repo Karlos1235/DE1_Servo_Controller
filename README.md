@@ -46,6 +46,6 @@
     </br>
     [2] http://www.ee.ic.ac.uk/pcheung/teaching/DE1_EE/stores/sg90_datasheet.pdf
     </br>
-    [2] https://digilent.com/reference/programmable-logic/nexys-a7/start
+    [3] https://digilent.com/reference/programmable-logic/nexys-a7/start
     </p>
 </div>
