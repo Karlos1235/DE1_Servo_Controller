@@ -41,5 +41,11 @@
 
 <div id="sources">
     <h2>References</h2>
-    <p>[1] https://www.vorpenergy.com/batteries/pwm-solar-charge-controllers/</p>
+    <p>
+    [1] https://www.vorpenergy.com/batteries/pwm-solar-charge-controllers/
+    </br>
+    [2] http://www.ee.ic.ac.uk/pcheung/teaching/DE1_EE/stores/sg90_datasheet.pdf
+    </br>
+    [2] https://digilent.com/reference/programmable-logic/nexys-a7/start
+    </p>
 </div>
