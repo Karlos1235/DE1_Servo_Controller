@@ -42,6 +42,8 @@
     <div align="center">
         <img src="https://5.imimg.com/data5/SELLER/Default/2021/4/GI/GX/JQ/11534553/nexys-a7-50t-fpga-development-board-250x250.jpg" alt="nexys-a7" srcset="">
         <p>Figure 2: Nexys A7-50T FPGA board</p>
+        <img src="images/zapojenie.png" alt="">
+        <p>Figure 3: The circuit for connecting 4 SG90 9g servo motors to Nexys A7-50T FPGA board</p>
     </div>
 </div>
 
@@ -49,7 +51,7 @@
     <h1>Software</h1>
     <div align="center">
         <img src="images/top_level.png" alt="top_level" srcset="">
-        <p>Figure 3: Elaborated design for top level</p>
+        <p>Figure 4: Elaborated design for top level</p>
     </div>
     <h2>Source files</h2>
     <div id="clock">
@@ -83,7 +85,7 @@
         </p>
         <div align="center">
             <img src="images/testbench2.png" alt="Testbench">
-            <p>Figure 4: Testbench for clk64kHz and servo_pwm modules</p>
+            <p>Figure 5: Testbench for clk64kHz and servo_pwm modules</p>
         </div>
     </div>
     <h2>Constraints</h2>
@@ -94,7 +96,7 @@
 </div>
 
 <div id="sources">
-    <h2>References</h2>
+    <h1>References</h1>
     <p>
     [1] https://www.vorpenergy.com/batteries/pwm-solar-charge-controllers/
     </br>
