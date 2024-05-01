@@ -7,7 +7,5 @@
 
 <div>
     <h3>Team members and roles</h3>
-    <p>Karol Nový - Video, Coding</p>
-    <p>Martin Matyska - Coding, Documentation</p>
-    <p>Marek Michalica - Hardware, Documentation</p>
+    <p>Karol Nový - Video, Coding</br>Martin Matyska - Coding, Documentation</br>Marek Michalica - Hardware, Documentation</p>
 </div>
