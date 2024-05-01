@@ -97,7 +97,7 @@
 
 <div id="demnostration">
     <h1>Video demonstration of all functions</h1>
-    <video src="images/video_demonstration.mp4"></video>
+    (images/video_demonstration.mp4)
 </div>
 
 <div id="sources">
