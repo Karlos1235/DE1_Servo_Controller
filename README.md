@@ -95,10 +95,7 @@
     </div>
 </div>
 
-<div id="demnostration">
-    [Video demonstration](images/video_demonstration.mp4)
-</div>
-
+[Video demonstration](images/video_demonstration.mp4)
 <div id="sources">
     <h1>References</h1>
     <p>
