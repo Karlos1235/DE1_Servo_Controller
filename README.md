@@ -36,6 +36,8 @@
         Utilizing the Nexys A7 FPGA board as mandated by the project requirements, we integrated four SG90 9g servo motors into our system, connecting them to the board's Pmod ports (JA, JB, JC, JD). Technical specifications for both the servos and the FPGA board are detailed in the accompanying datasheets.
         Servo selection is made possible by switches SW12 to SW15, while angle selection utilizes switches SW0 to SW6. The BTNR button allows for PWM signal interruption when required.
         For user convenience and system monitoring, each activated switch illuminates its corresponding LED diode, aiding intuitive operation during servo and angle selection.
+        </br>
+        When considering that we have 7 switches (128 positions) and a modulation range of 2 ms, we obtain the frequency for our clock signal using the following equation: f=1/(2ms/128)=64kHz. With a frequency of 64kHz, we will have 1 ms every 64 repetitions, and for a frequency of 20 ms, we simply multiply by 20 (20*64=1280). The value of 1280 will be used for the internal counter to ensure a period of 20 ms.
     </p>
 </div>
 
