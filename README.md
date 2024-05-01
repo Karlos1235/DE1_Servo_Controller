@@ -86,8 +86,11 @@
             <p>Figure 4: Testbench for clk64kHz and servo_pwm modules</p>
         </div>
     </div>
-    <h4>Constraints</h4>
-    <a href="https://github.com/MarekMichalica/DE1_Servo_Controller/blob/main/PWM_Servo.srcs/constrs_1/new/nexys_A7_50T.xdc">nexys_A7_50T.xdc</a>
+    <h2>Constraints</h2>
+    <div id="constraints">
+        <a href="https://github.com/MarekMichalica/DE1_Servo_Controller/blob/main/PWM_Servo.srcs/constrs_1/new/nexys_A7_50T.xdc">nexys_A7_50T.xdc</a>
+        <p align="justify">This module contains necessary constraints for connecting to physical pins on the Nexys A7-50T FPGA board."</p>
+    </div>
 </div>
 
 <div id="sources">
