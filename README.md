@@ -30,6 +30,15 @@
     </div>
 </div>
 
+<div id="hardware">
+    <h2>Hardware</h2>
+    <p align="justify">
+        Utilizing the Nexys A7 FPGA board as mandated by the project requirements, we integrated four SG90 9g servo motors into our system, connecting them to the board's Pmod ports (JA, JB, JC, JD). Technical specifications for both the servos and the FPGA board are detailed in the accompanying datasheets.
+        Servo selection is made possible by switches SW12 to SW15, while angle selection utilizes switches SW0 to SW6. The BTNR button allows for PWM signal interruption when required.
+        For user convenience and system monitoring, each activated switch illuminates its corresponding LED diode, aiding intuitive operation during servo and angle selection.
+    </p>
+</div>
+
 <div id="sources">
     <h2>References</h2>
     <p>[1] https://www.vorpenergy.com/batteries/pwm-solar-charge-controllers/</p>
