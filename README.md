@@ -51,11 +51,32 @@
         <img src="images/top_level.png" alt="top_level" srcset="">
         <p>Figure 3: Elaborated design for top level</p>
     </div>
-    <h3>Direct links to source files</h3>
-    <h4>Source files</h4>
-    <a href="https://github.com/MarekMichalica/DE1_Servo_Controller/blob/main/PWM_Servo.srcs/sources_1/new/clk64kHz.vhd">clock64kHz.vhd</a>
-    <a href="https://github.com/MarekMichalica/DE1_Servo_Controller/blob/main/PWM_Servo.srcs/sources_1/new/servo_pwm.vhd">servo_pwm.vhd</a>
-    <a href="https://github.com/MarekMichalica/DE1_Servo_Controller/blob/main/PWM_Servo.srcs/sources_1/new/top_level1.vhd">top_level1.vhd</a>
+
+    <h2>Source files</h2>
+    <div id="clock">
+        <a href="https://github.com/MarekMichalica/DE1_Servo_Controller/blob/main/PWM_Servo.srcs/sources_1/new/clk64kHz.vhd">clock64kHz.vhd</a>
+        <p align="justify">
+            This module functions as a clock frequency divider, generating a 64 kHz clock signal from an input clock. It takes in a main clock signal <b>clk</b>, a reset signal <b>reset</b>, and outputs the generated 64 kHz clock signal <b>clk_out</b>. Inside, 
+            it toggles the output signal every 780 clock cycles, effectively dividing the input frequency to 64 kHz. This module facilitates precise timing control for applications requiring a 64 kHz clock signal.
+        </p>
+    </div>
+
+    <div id="servoPWM">
+        <a href="https://github.com/MarekMichalica/DE1_Servo_Controller/blob/main/PWM_Servo.srcs/sources_1/new/servo_pwm.vhd">servo_pwm.vhd</a>
+        <p align="justify">
+            This module serves as a controller for a servo motor using pulse-width modulation (PWM). It takes in a clock signal <b>clk</b>, a reset signal <b>reset</b>, and a 7-bit vector <b>pos</b> representing the desired position of the servo motor. The module generates a PWM output signal <b>servo</b> to control the servo motor. It utilizes an internal counter <b>cnt</b> to track clock cycles and calculates a PWM pulse width <b>pwmi</b> based on the input position. The servo output signal is set to 1 when the counter
+            is less than the PWM pulse width, indicating the ON state of the PWM signal, and 0 otherwise. This allows precise control over the servo motor's position based on the input position value.
+        </p>
+    </div>
+
+    <div id="topLevel">
+        <a href="https://github.com/MarekMichalica/DE1_Servo_Controller/blob/main/PWM_Servo.srcs/sources_1/new/top_level1.vhd">top_level1.vhd</a>
+        <p align="justify">
+            This model functions as an integration of servo motor control and clock frequency division. It combines the functionalities of two VHDL components: <b>clk64kHz</b>, responsible for generating a 64 kHz clock signal from the input clock, and <b>servo_pwm</b>, managing servo motor control through pulse-width modulation (<b>PWM</b>). Inputs include the main clock signal <b>clk</b>, a reset signal <b>reset</b>, a 4-bit switch vector <b>sw</b>, and a 7-bit vector <b>pos</b> representing the servo motor position. Outputs consist of a 4-bit LED display <b>LED</b>, a 7-bit LED display <b>LED_P</b>, and a 4-bit servo control vector <b>servo_t</b>. The model maps the clock signal to <b>clk64kHz</b> and utilizes the resultant clock signal to drive <b>servo_pwm</b>. 
+            LED outputs reflect the switch values and servo motor position, facilitating visual feedback. Additionally, servo control signals are generated based on switch values, enabling individual servo motor manipulation.
+        </p>
+    </div>
+
     <h4>Testbench files</h4>
     <a href="https://github.com/MarekMichalica/DE1_Servo_Controller/blob/main/PWM_Servo.srcs/sim_1/new/servo_pwm_clk64kHz_tb.vhd">servo_pwm_clk64kHz_tb.vhd</a>
     <h4>Constraints</h4>
