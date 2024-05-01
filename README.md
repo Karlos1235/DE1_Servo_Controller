@@ -73,8 +73,16 @@
             LED outputs reflect the switch values and servo motor position, facilitating visual feedback. Additionally, servo control signals are generated based on switch values, enabling individual servo motor manipulation.
         </p>
     </div>
-    <h4>Testbench files</h4>
-    <a href="https://github.com/MarekMichalica/DE1_Servo_Controller/blob/main/PWM_Servo.srcs/sim_1/new/servo_pwm_clk64kHz_tb.vhd">servo_pwm_clk64kHz_tb.vhd</a>
+    <h2>Testbench files</h2>
+    <div id="testBench">
+        <a href="https://github.com/MarekMichalica/DE1_Servo_Controller/blob/main/PWM_Servo.srcs/sim_1/new/servo_pwm_clk64kHz_tb.vhd">servo_pwm_clk64kHz_tb.vhd</a>
+        <p align="justify">
+            This testbench, <b>servo_pwm_clk64kHz_tb</b>, is devised to validate the functionality of the <b>clock64kHz.vhd</b> and <b>servo_pwm.vhd</b> modules. The <b>UUT</b> combines servo motor control and clock frequency division functionalities. Inputs to the testbench include the clock signal (<b>clk</b>), reset signal (<b>reset</b>), a 4-bit switch vector (<b>switch</b>), and a 7-bit vector representing the servo motor position (<b>pos</b>). Outputs comprise a 4-bit servo control vector (<b>servo</b>). The clock signal has a period of 10 ns. The testbench encompasses processes for generating clock signals and stimuli. The clock process generates a clock signal with a 50% duty cycle. 
+            The stimuli process initializes the reset signal, toggles switch values, and adjusts the servo motor position, simulating different scenarios to verify the module's functionality.
+        </p>
+        <img src="images/testbench.png" alt="Testbench">
+        <p>Figure 4: Testbench for clk64kHz and servo_pwm modules</p>
+    </div>
     <h4>Constraints</h4>
     <a href="https://github.com/MarekMichalica/DE1_Servo_Controller/blob/main/PWM_Servo.srcs/constrs_1/new/nexys_A7_50T.xdc">nexys_A7_50T.xdc</a>
 </div>
