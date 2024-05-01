@@ -10,14 +10,14 @@ ARCHITECTURE behavior OF servo_pwm_clk64kHz_tb IS
         PORT(
             clk  : IN  STD_LOGIC;                    
             reset: IN  STD_LOGIC;                    
-            sw : in std_logic_vector(1 downto 0);    
+            sw : in std_logic_vector(3 downto 0);    
             pos  : IN  STD_LOGIC_VECTOR(6 downto 0); 
             servo_t: OUT STD_LOGIC_vector(3 downto 0)
         );
     END COMPONENT;
 
     -- Inputs.
-    signal switch: std_logic_vector(1 downto 0);
+    signal switch: std_logic_vector(3 downto 0);
     signal clk  : std_logic := '0';
     signal reset: std_logic := '0';
     signal pos  : std_logic_vector(6 downto 0) := (others => '0');
@@ -49,21 +49,20 @@ BEGIN
         wait for 50 ns;
         reset <= '0';
         wait for 50 ns;
-        switch <= "01";
-        wait for 20ns;
-        pos <= "0000000";
+        switch <= "0100";
         wait for 20 ns;
         pos <= "1000000";
-        wait for 200 ns;
-        switch <= "00";
-        wait for 20 ns;
-        pos <= "1100000";
-        --wait for 20 ms;
-        --pos <= "1010000";
-        --wait for 20 ms;
-        --pos <= "1111000";
-        --wait for 20 ms;
-        --pos <= "1111111";
+        wait for 15 ms;
+        switch <= "0001";
+        wait for 50 ns;
+        pos <= "0101000";
+        wait for 15 ms;
+        switch <= "1000";
+        wait for 50 ns;
+        pos <= "0010000";
+        
+        
+        
         wait;
     end process;
 END;
