@@ -95,7 +95,11 @@
     </div>
 </div>
 
-[Video demonstration](images/video_demonstration.mp4)
+<video width="1280" height="720" controls>
+  <source src="images/video_demonstration.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
 <div id="sources">
     <h1>References</h1>
     <p>
