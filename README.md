@@ -95,6 +95,11 @@
     </div>
 </div>
 
+<div id="demnostration">
+    <h1>Video demonstration of all functions</h1>
+    <video src="images/video_demonstration.mp4"></video>
+</div>
+
 <div id="sources">
     <h1>References</h1>
     <p>
