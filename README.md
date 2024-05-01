@@ -98,7 +98,9 @@
 <div id="demnostration">
     <h1>Video demonstration</h1>
 </div>
-https://github.com/MarekMichalica/DE1_Servo_Controller/blob/main/images/video_demonstration.mp4
+
+https://github.com/MarekMichalica/DE1_Servo_Controller/assets/66474721/ab1fd476-0292-443c-ab05-50942af0c972
+
 <div id="sources">
     <h1>References</h1>
     <p>
