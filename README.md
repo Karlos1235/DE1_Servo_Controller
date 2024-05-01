@@ -26,7 +26,7 @@
     <div align="center">
         <img src="https://slidetodoc.com/presentation_image_h/c216b6866f4d0c039758f6263dd11c90/image-2.jpg" alt="PWM Modulation Image 1" srcset="" width="521px" height="360px">
         </br>
-        <p>Figure 1. Pulse Width Modulation (PWM)</p>
+        <p>Figure 1: Pulse Width Modulation (PWM)</p>
     </div>
 </div>
 
@@ -39,6 +39,10 @@
         </br>
         When considering that we have 7 switches (128 positions) and a modulation range of 2 ms, we obtain the frequency for our clock signal using the following equation: f=1/(2ms/128)=64kHz. With a frequency of 64kHz, we will have 1 ms every 64 repetitions, and for a frequency of 20 ms, we simply multiply by 20 (20*64=1280). The value of 1280 will be used for the internal counter to ensure a period of 20 ms.
     </p>
+    <div align="center">
+        <img src="https://5.imimg.com/data5/SELLER/Default/2021/4/GI/GX/JQ/11534553/nexys-a7-50t-fpga-development-board-250x250.jpg" alt="nexys-a7" srcset="">
+        <p>Figure 2: Nexys A7-50T FPGA board</p>
+    </div>
 </div>
 
 <div id="sources">
