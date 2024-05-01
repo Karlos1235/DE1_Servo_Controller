@@ -99,6 +99,8 @@
     <h1>Video demonstration</h1>
 </div>
 
+https://github.com/MarekMichalica/DE1_Servo_Controller/assets/66474721/ab1fd476-0292-443c-ab05-50942af0c972
+
 <div id="sources">
     <h1>References</h1>
     <p>
@@ -107,5 +109,13 @@
     [2] http://www.ee.ic.ac.uk/pcheung/teaching/DE1_EE/stores/sg90_datasheet.pdf
     </br>
     [3] https://digilent.com/reference/programmable-logic/nexys-a7/start
+    </br>
+    [4] https://www.codeproject.com/Articles/513169/Servomotor-Control-with-PWM-and-VHDL
+    </br>
+    [5] https://www.jameco.com/Jameco/workshop/Howitworks/how-servo-motors-work.html
+    </br>
+    [6] https://electronics.stackexchange.com/questions/346603/driving-servo-motor-with-pwm-signal
+    </br>
+    [7] https://en.wikipedia.org/wiki/Pulse-width_modulation
     </p>
 </div>

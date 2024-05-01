@@ -1,0 +1,2 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/Marek Michalica/Desktop/de1/DE1_Servo_Controller/PWM_Servo.srcs/sim_1/new/servo_pwm_clk64kHz_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'servo_pwm_clk64kHz_tb'
