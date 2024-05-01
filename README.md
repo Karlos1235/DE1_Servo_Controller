@@ -82,7 +82,7 @@
             During the simulation conducted by the testbench, the <b>SW14 switch</b> is activated to choose servo 2, and the servo angle is configured to 90 degrees using the pos(6) signal. This setup aims to evaluate the servo motor control specifically for servo 2, ensuring its proper operation at a predefined angle.
         </p>
         <div align="center">
-            <img src="images/testbench.png" alt="Testbench">
+            <img src="images/testbench2.png" alt="Testbench">
             <p>Figure 4: Testbench for clk64kHz and servo_pwm modules</p>
         </div>
     </div>
