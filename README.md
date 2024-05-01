@@ -77,11 +77,14 @@
     <div id="testBench">
         <a href="https://github.com/MarekMichalica/DE1_Servo_Controller/blob/main/PWM_Servo.srcs/sim_1/new/servo_pwm_clk64kHz_tb.vhd">servo_pwm_clk64kHz_tb.vhd</a>
         <p align="justify">
-            This testbench, <b>servo_pwm_clk64kHz_tb</b>, is devised to validate the functionality of the <b>clock64kHz.vhd</b> and <b>servo_pwm.vhd</b> modules. The <b>UUT</b> combines servo motor control and clock frequency division functionalities. Inputs to the testbench include the clock signal (<b>clk</b>), reset signal (<b>reset</b>), a 4-bit switch vector (<b>switch</b>), and a 7-bit vector representing the servo motor position (<b>pos</b>). Outputs comprise a 4-bit servo control vector (<b>servo</b>). The clock signal has a period of 10 ns. The testbench encompasses processes for generating clock signals and stimuli. The clock process generates a clock signal with a 50% duty cycle. 
-            The stimuli process initializes the reset signal, toggles switch values, and adjusts the servo motor position, simulating different scenarios to verify the module's functionality.
+            This testbench, named <b>servo_pwm_clk64kHz_tb</b>, is designed to verify the functionality of the <b>servo_pwm_clk64kHz</b> module. The Unit under test (UUT) is instantiated within this architecture. The <b>UUT</b> combines servo motor control and clock frequency division features. Inputs to the testbench include the clock signal (<b>clk</b>), reset signal (<b>reset</b>), a 4-bit switch vector (<b>switch</b>), and a 7-bit vector indicating the servo motor position (<b>pos</b>). Outputs consist of a 4-bit servo control vector (<b>servo</b>). The clock signal operates with a period of 10 ns. The testbench includes processes to generate clock signals and stimuli. The clock process generates a clock signal with a 50% duty cycle. 
+            The stimuli process initializes the reset signal, alters switch values, and adjusts the servo motor position, simulating various scenarios to validate the module's functionality.
+            During the simulation conducted by the testbench, the <b>SW14 switch</b> is activated to choose servo 2, and the servo angle is configured to 90 degrees using the pos(6) signal. This setup aims to evaluate the servo motor control specifically for servo 2, ensuring its proper operation at a predefined angle.
         </p>
-        <img src="images/testbench.png" alt="Testbench">
-        <p>Figure 4: Testbench for clk64kHz and servo_pwm modules</p>
+        <div align="center">
+            <img src="images/testbench.png" alt="Testbench">
+            <p>Figure 4: Testbench for clk64kHz and servo_pwm modules</p>
+        </div>
     </div>
     <h4>Constraints</h4>
     <a href="https://github.com/MarekMichalica/DE1_Servo_Controller/blob/main/PWM_Servo.srcs/constrs_1/new/nexys_A7_50T.xdc">nexys_A7_50T.xdc</a>
