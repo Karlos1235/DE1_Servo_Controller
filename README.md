@@ -96,8 +96,7 @@
 </div>
 
 <div id="demnostration">
-    <h1>Video demonstration of all functions</h1>
-    (images/video_demonstration.mp4)
+    [Video demonstration](images/video_demonstration.mp4)
 </div>
 
 <div id="sources">
