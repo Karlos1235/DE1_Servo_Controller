@@ -52,20 +52,17 @@
         <p>Figure 3: Elaborated design for top level</p>
     </div>
     <h3>Direct links to source files</h3>
-    <ol type="I">
+    <ul>
         <h4>Source files</h4>
         <li><a href="https://github.com/MarekMichalica/DE1_Servo_Controller/blob/main/PWM_Servo.srcs/sources_1/new/clk64kHz.vhd">clock64kHz.vhd</a></li>
         <li><a href="https://github.com/MarekMichalica/DE1_Servo_Controller/blob/main/PWM_Servo.srcs/sources_1/new/servo_pwm.vhd">servo_pwm.vhd</a></li>
         <li><a href="https://github.com/MarekMichalica/DE1_Servo_Controller/blob/main/PWM_Servo.srcs/sources_1/new/top_level1.vhd">top_level1.vhd</a></li>
-    </ol>
-    <ol type="I">
         <h4>Testbench files</h4>
         <li><a href="https://github.com/MarekMichalica/DE1_Servo_Controller/blob/main/PWM_Servo.srcs/sim_1/new/servo_pwm_clk64kHz_tb.vhd">servo_pwm_clk64kHz_tb.vhd</a></li>
-    </ol>
-    <ol type="I">
         <h4>Constraints</h4>
         <li><a href="https://github.com/MarekMichalica/DE1_Servo_Controller/blob/main/PWM_Servo.srcs/constrs_1/new/nexys_A7_50T.xdc">nexys_A7_50T.xdc</a></li>
-    </ol>
+    </ul>
+    
 </div>
 
 <div id="sources">
