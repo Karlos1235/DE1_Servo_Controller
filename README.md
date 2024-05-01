@@ -52,17 +52,14 @@
         <p>Figure 3: Elaborated design for top level</p>
     </div>
     <h3>Direct links to source files</h3>
-    <ul style="margin:0px;">
-        <h4>Source files</h4>
-        <li><a href="https://github.com/MarekMichalica/DE1_Servo_Controller/blob/main/PWM_Servo.srcs/sources_1/new/clk64kHz.vhd">clock64kHz.vhd</a></li>
-        <li><a href="https://github.com/MarekMichalica/DE1_Servo_Controller/blob/main/PWM_Servo.srcs/sources_1/new/servo_pwm.vhd">servo_pwm.vhd</a></li>
-        <li><a href="https://github.com/MarekMichalica/DE1_Servo_Controller/blob/main/PWM_Servo.srcs/sources_1/new/top_level1.vhd">top_level1.vhd</a></li>
-        <h4>Testbench files</h4>
-        <li><a href="https://github.com/MarekMichalica/DE1_Servo_Controller/blob/main/PWM_Servo.srcs/sim_1/new/servo_pwm_clk64kHz_tb.vhd">servo_pwm_clk64kHz_tb.vhd</a></li>
-        <h4>Constraints</h4>
-        <li><a href="https://github.com/MarekMichalica/DE1_Servo_Controller/blob/main/PWM_Servo.srcs/constrs_1/new/nexys_A7_50T.xdc">nexys_A7_50T.xdc</a></li>
-    </ul>
-    
+    <h4>Source files</h4>
+    <a href="https://github.com/MarekMichalica/DE1_Servo_Controller/blob/main/PWM_Servo.srcs/sources_1/new/clk64kHz.vhd">clock64kHz.vhd</a>
+    <a href="https://github.com/MarekMichalica/DE1_Servo_Controller/blob/main/PWM_Servo.srcs/sources_1/new/servo_pwm.vhd">servo_pwm.vhd</a>
+    <a href="https://github.com/MarekMichalica/DE1_Servo_Controller/blob/main/PWM_Servo.srcs/sources_1/new/top_level1.vhd">top_level1.vhd</a>
+    <h4>Testbench files</h4>
+    <a href="https://github.com/MarekMichalica/DE1_Servo_Controller/blob/main/PWM_Servo.srcs/sim_1/new/servo_pwm_clk64kHz_tb.vhd">servo_pwm_clk64kHz_tb.vhd</a>
+    <h4>Constraints</h4>
+    <a href="https://github.com/MarekMichalica/DE1_Servo_Controller/blob/main/PWM_Servo.srcs/constrs_1/new/nexys_A7_50T.xdc">nexys_A7_50T.xdc</a>
 </div>
 
 <div id="sources">
