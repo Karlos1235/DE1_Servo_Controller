@@ -69,9 +69,9 @@
         </p>
     </div>
     <div id="topLevel">
-        <a href="https://github.com/MarekMichalica/DE1_Servo_Controller/blob/main/PWM_Servo.srcs/sources_1/new/top_level1.vhd">top_level1.vhd</a>
+        <a href="https://github.com/MarekMichalica/DE1_Servo_Controller/blob/main/PWM_Servo.srcs/sources_1/new/top_level.vhd">top_level.vhd</a>
         <p align="justify">
-            This model functions as an integration of servo motor control and clock frequency division. It combines the functionalities of two VHDL components: <b>clk64kHz</b>, responsible for generating a 64 kHz clock signal from the input clock, and <b>servo_pwm</b>, managing servo motor control through pulse-width modulation (<b>PWM</b>). Inputs include the main clock signal <b>clk</b>, a reset signal <b>reset</b>, a 4-bit switch vector <b>sw</b>, and a 7-bit vector <b>pos</b> representing the servo motor position. Outputs consist of a 4-bit LED display <b>LED</b>, a 7-bit LED display <b>LED_P</b>, and a 4-bit servo control vector <b>servo_t</b>. The model maps the clock signal to <b>clk64kHz</b> and utilizes the resultant clock signal to drive <b>servo_pwm</b>. 
+            This model functions as an integration of servo motor control and clock frequency division. It combines the functionalities of two VHDL components: <b>clk64kHz</b>, responsible for generating a 64 kHz clock signal from the input clock, and <b>servo_pwm</b>, managing servo motor control through pulse-width modulation (<b>PWM</b>). Inputs include the main clock signal <b>clk</b>, a reset signal <b>reset</b>, a 4-bit switch vector <b>sw</b>, and a 7-bit vector <b>pos</b> representing the servo motor position. Outputs consist of a 4-bit LED vector <b>LED</b> used by the servos, a 7-bit LED vector <b>LED_P</b> used by angle switches, and a 4-bit servo control vector <b>servo_t</b>. The model maps the clock signal to <b>clk64kHz</b> and utilizes the resultant clock signal to drive <b>servo_pwm</b>. 
             LED outputs reflect the switch values and servo motor position, facilitating visual feedback. Additionally, servo control signals are generated based on switch values, enabling individual servo motor manipulation.
         </p>
     </div>
@@ -84,7 +84,7 @@
             During the simulation conducted by the testbench, the <b>SW14 switch</b> is activated to choose servo 2, and the servo angle is configured to 90 degrees using the pos(6) signal. This setup aims to evaluate the servo motor control specifically for servo 2, ensuring its proper operation at a predefined angle.
         </p>
         <div align="center">
-            <img src="images/testbench2.png" alt="Testbench">
+            <img src="images/testbench.png" alt="Testbench">
             <p>Figure 5: Testbench for clk64kHz and servo_pwm modules</p>
         </div>
     </div>
@@ -96,9 +96,30 @@
 </div>
 
 <div id="demnostration">
-    <h1>Video demonstration</h1>
+    <h1>Instructions and video demonstration</h1>
 </div>
 
+<div>
+    <h2>Instructions</h2>
+    <h3>Selecting Servo Motor</h3>
+    <p align="justify">
+        To designate the target servo motor for manipulation, toggle the corresponding switch among SW15 to SW12. Each switch correlates to a specific servo motor, with SW15 representing the first servo at the JA Pmod port, SW14 indicating the second servo at JB Pmod port and so forth. This selection process ensures precise control over the servo to be adjusted.
+    </p>
+    <h3>Setting Angle</h3>
+    <p align="justify">
+        When a switch within the SW6 to SW0 range is flipped, the connected servo motor instantly adjusts to the configured angle. Each switch corresponds directly to a specific angle setting: flipping SW6 sets the angle to 90 degrees, SW5 to 45 degrees, SW4 to half of that, and so forth. This immediate adjustment enables users to precisely control the servo motor's position with ease and accuracy.
+    </p>
+    <h3>Combining Angles</h3>
+    <p align="justify">
+        To create complex angle combinations, simultaneously toggle multiple switches within the SW6 to SW0 range. Each flipped switch contributes its angle to the total, instantly adjusting the selected servo motor accordingly. For example, activating SW6, SW5, and SW3 simultaneously instantly adds their respective angles, resulting in a combined angle for precise servo positioning.
+    </p>
+    <h3>Observing LED Feedback</h3>
+    <p align="justify">
+        Throughout the process, LED indicators offer valuable feedback on the system's current status and the selected servo motor. By monitoring these indicators, users can easily discern which servo motor is active and whether an angle setting is in progress, ensuring efficient and informed operation of the servo control system.
+    </p>
+</div>
+
+<h2>Video demonstration</h2>
 https://github.com/MarekMichalica/DE1_Servo_Controller/assets/66474721/ab1fd476-0292-443c-ab05-50942af0c972
 
 <div id="sources">
