@@ -120,7 +120,8 @@
 </div>
 
 <h2>Video demonstration</h2>
-https://github.com/MarekMichalica/DE1_Servo_Controller/assets/66474721/ab1fd476-0292-443c-ab05-50942af0c972
+
+https://github.com/MarekMichalica/DE1_Servo_Controller/assets/66474721/2c78debe-008c-4e1d-b04f-1390e239a62a
 
 <div id="sources">
     <h1>References</h1>
