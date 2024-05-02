@@ -87,6 +87,7 @@
             <img src="images/testbench.png" alt="Testbench">
             <p>Figure 5: Testbench for clk64kHz and servo_pwm modules</p>
         </div>
+        ![image](https://github.com/Karlos1235/DE1_Servo_Controller/assets/119747404/eed9e8a3-4b4d-461c-a462-24ba501e594b)
     </div>
     <h2>Constraints</h2>
     <div id="constraints">
