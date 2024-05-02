@@ -4,10 +4,10 @@ use IEEE.NUMERIC_STD.ALL;
 
 entity servo_pwm is
     PORT (
-        clk   : IN  STD_LOGIC;
-        reset : IN  STD_LOGIC;
-        pos   : IN  STD_LOGIC_VECTOR(6 downto 0);
-        servo : OUT STD_LOGIC
+        clk   : IN  STD_LOGIC; -- Input clock signal
+        reset : IN  STD_LOGIC; -- Input signal for reset
+        pos   : IN  STD_LOGIC_VECTOR(6 downto 0); -- Input signal for servo position
+        servo : OUT STD_LOGIC -- Output signal for servo control
     );
 end servo_pwm;
 
@@ -18,12 +18,12 @@ begin
     pwmi <= unsigned('0' & pos) + 32; -- Minimum value should be 0.5ms.
     counter: process (reset, clk) begin -- Counter process, from 0 to 1279.
         if (reset = '1') then
-            cnt <= (others => '0');
-        elsif rising_edge(clk) then
+            cnt <= (others => '0'); -- If reset is active, set counter to 0
+        elsif rising_edge(clk) then -- On each rising clock edge, increment the counter
             if (cnt = 1279) then
-                cnt <= (others => '0');
+                cnt <= (others => '0'); -- If counter reaches 1279, reset to 0
             else
-                cnt <= cnt + 1;
+                cnt <= cnt + 1; -- Otherwise, increment the counter by 1
             end if;
         end if;
     end process;
