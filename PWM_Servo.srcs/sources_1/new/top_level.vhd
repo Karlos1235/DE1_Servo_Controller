@@ -1,60 +1,72 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
-entity top_level is
-    Port (
-        CLK       : in  STD_LOGIC; -- Clock input
-        BTNC      : in  STD_LOGIC; 
-        BTND      : in  STD_LOGIC;
-        BTNL      : in  STD_LOGIC;
-        BTNU      : in  STD_LOGIC;
-        JA        : out  STD_LOGIC;
-        JB        : out  STD_LOGIC;
-        JC        : out  STD_LOGIC;
-        JD        : out  STD_LOGIC
+entity servo_pwm_clk64kHz is
+    PORT(
+        clk  : IN  STD_LOGIC; -- Input clock signal
+        reset: IN  STD_LOGIC; -- Reset signal
+        sw : in std_logic_vector(3 downto 0); -- Input switches
+        pos  : IN  STD_LOGIC_VECTOR(6 downto 0); -- Input position signal
+        LED : out std_logic_vector(3 downto 0); -- Output LED display
+        LED_P : out std_logic_vector(6 downto 0); -- Output LED display for position
+        servo_t: OUT STD_LOGIC_vector(3 downto 0) -- Output servo signal
     );
-end top_level;
+end servo_pwm_clk64kHz;
 
-architecture Behavioral of top_level is
-
-    -- Declaration of the servo_control component
-    component servo_control
-        Port (
-            CLK       : in  STD_LOGIC;
-            BTNC      : in  STD_LOGIC;
-            BTND      : in  STD_LOGIC;
-            BTNL      : in  STD_LOGIC;
-            BTNU      : in  STD_LOGIC;
-            JA        : out  STD_LOGIC;
-            JB        : out  STD_LOGIC;
-            JC        : out  STD_LOGIC;
-            JD        : out  STD_LOGIC
+architecture Behavioral of servo_pwm_clk64kHz is
+    -- Declaration of components used within the architecture
+    COMPONENT clk64kHz
+        PORT(
+            clk    : in  STD_LOGIC; -- Input clock signal
+            reset  : in  STD_LOGIC; -- Reset signal
+            clk_out: out STD_LOGIC -- Output clock signal
         );
-    end component;
+    END COMPONENT;
+    
+    COMPONENT servo_pwm
+        PORT (
+            clk   : IN  STD_LOGIC; -- Input clock signal
+            reset : IN  STD_LOGIC; -- Reset signal
+            pos   : IN  STD_LOGIC_VECTOR(6 downto 0); -- Input position signal
+            servo : OUT STD_LOGIC -- Output servo signal
+        );
+    END COMPONENT;
 
-    -- Declaration of internal signals
-    signal JA_internal, JB_internal, JC_internal, JD_internal: STD_LOGIC;
-
+    -- Declaration of internal signals used within the architecture
+    signal clk_out : STD_LOGIC := '0'; -- Clock output signal
+    signal servo_out : STD_LOGIC := '0'; -- Servo output signal
 begin
+    clk64kHz_map: clk64kHz PORT MAP(
+        clk => clk, -- Connects the external clock signal to the component
+        reset => reset, -- Connects the reset signal to the component
+        clk_out => clk_out -- Connects the output clock signal to internal signal
+    );
+    
+    servo_pwm_map: servo_pwm PORT MAP(
+        clk => clk_out, -- Connects the internal clock signal to the component
+        reset => reset, -- Connects the reset signal to the component
+        pos => pos, -- Connects the position signal to the component
+        servo => servo_out -- Connects the output servo signal to internal signal
+    );
 
-    -- Instantiation of the servo_control component
-    servo_inst : servo_control
-        port map (
-            CLK   => CLK,
-            BTNC  => BTNC,
-            BTND  => BTND,
-            BTNL  => BTNL,
-            BTNU  => BTNU,
-            JA    => JA_internal,
-            JB    => JB_internal,
-            JC    => JC_internal,
-            JD    => JD_internal
-        );
+  -- Assigning switch values to LED outputs      
+  LED(0) <= sw(0);
+  LED(1) <= sw(1);
+  LED(2) <= sw(2);
+  LED(3) <= sw(3);
 
-    -- Mapping internal signals to outputs
-    JA <= JA_internal;
-    JB <= JB_internal;
-    JC <= JC_internal;
-    JD <= JD_internal;
+  -- Assigning position values to LED_P outputs
+  LED_P(0) <= pos(0);
+  LED_P(1) <= pos(1);
+  LED_P(2) <= pos(2);
+  LED_P(3) <= pos(3);
+  LED_P(4) <= pos(4);
+  LED_P(5) <= pos(5);
+  LED_P(6) <= pos(6);
 
+  -- Multiplexing servo output based on switch values
+  servo_t(0) <= servo_out when sw = "1000" else '0';
+  servo_t(1) <= servo_out when sw = "0100" else '0';
+  servo_t(2) <= servo_out when sw = "0010" else '0';
+  servo_t(3) <= servo_out when sw = "0001" else '0';
 end Behavioral;
