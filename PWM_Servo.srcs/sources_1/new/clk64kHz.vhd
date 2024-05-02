@@ -3,29 +3,29 @@ use IEEE.STD_LOGIC_1164.ALL;
  
 entity clk64kHz is
     Port (
-        clk    : in  STD_LOGIC; -- Vstupní hodinový signál
-        reset  : in  STD_LOGIC; -- Reset signál pro resetování čítače
-        clk_out: out STD_LOGIC  -- Výstupní signál s frekvencí 64kHZ
+        clk    : in  STD_LOGIC; -- Input clock signal
+        reset  : in  STD_LOGIC; -- Reset signal for resetting the counter
+        clk_out: out STD_LOGIC  -- Output signal with frequency 64kHZ
     );
 end clk64kHz;
  
 architecture Behavioral of clk64kHz is
-    signal temporal: STD_LOGIC; -- Pomocný signál pro uchování stavu
-    signal counter : integer range 0 to 780 := 0; -- Čítač impulsů
+    signal temporal: STD_LOGIC; -- Auxiliary signal for state holding
+    signal counter : integer range 0 to 780 := 0; -- Counter for pulses
 begin
-    freq_divider: process (reset, clk) begin -- Proces pro dělení frekvence
-        if (reset = '1') then -- Pokud je reset aktivní
-            temporal <= '0'; -- Nastavíme výstupní signál na nulu
-            counter  <= 0; -- Resetujeme čítač
-        elsif rising_edge(clk) then -- Na náběžné hraně
-            if (counter = 780) then -- Pokud čítač dosáhne maxima
-                temporal <= NOT(temporal); -- Invertujeme výstupní signál
-                counter  <= 0; -- Resetujeme čítač
+    freq_divider: process (reset, clk) begin -- Process for frequency division
+        if (reset = '1') then -- If reset is active
+            temporal <= '0'; -- Set output signal to zero
+            counter  <= 0; -- Reset the counter
+        elsif rising_edge(clk) then -- On the rising edge
+            if (counter = 780) then -- If the counter reaches maximum
+                temporal <= NOT(temporal); -- Invert the output signal
+                counter  <= 0; -- Reset the counter
             else
-                counter <= counter + 1; --Jinak inkrementujeme čítač
+                counter <= counter + 1; -- Otherwise, increment the counter
             end if;
         end if;
     end process;
  
-    clk_out <= temporal; -- Připojení výstupního signálu k výstupnímu portu
+    clk_out <= temporal; -- Connect the output signal to the output port
 end Behavioral;
