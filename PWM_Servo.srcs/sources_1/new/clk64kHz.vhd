@@ -3,9 +3,9 @@ use IEEE.STD_LOGIC_1164.ALL;
  
 entity clk64kHz is
     Port (
-        clk    : in  STD_LOGIC;
-        reset  : in  STD_LOGIC;
-        clk_out: out STD_LOGIC
+        clk    : in  STD_LOGIC; -- Vstupní hodinový signál
+        reset  : in  STD_LOGIC; -- Reset signál pro resetování čítače
+        clk_out: out STD_LOGIC  -- Výstupní signál s frekvencí 64kHZ
     );
 end clk64kHz;
  
